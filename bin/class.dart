@@ -16,6 +16,8 @@ void main() {
   print(person.name);
   print(person.address);
   print(person.age);
+  person.age = 30;
+  print(person.age);
 
   Person person2 = Person();
   print(person2);
