@@ -10,9 +10,15 @@ class Person {
   }
 
   // https://youtu.be/k0ycD2aqPzU?t=1292
-  void sayHello() {
-    print("Hello $name, your age is $age years old, and you live in $address");
+  void sayHello(String nameParam) {
+    print(
+        "Hello $nameParam, my name is $name and my age is $age years old, and i live in $address");
   }
+
+  // https://youtu.be/k0ycD2aqPzU?t=1663 method expression body
+  void bangun() => print("Person class is wakeup");
+  void tidur() => print("Person class is sleep");
+  String state() => "state is normal";
 }
 
 void main() {
@@ -26,7 +32,10 @@ void main() {
   person.age = 30;
   // person.address = 'Indonesia'; //bakal error karena final
   print(person.age);
-  person.sayHello();
+  person.sayHello('Budi Utomo');
+  person.bangun();
+  person.tidur();
+  print(person.state());
 
 // https://youtu.be/k0ycD2aqPzU?t=1048
   Person person2 = Person();
