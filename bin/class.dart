@@ -13,6 +13,9 @@ class Person {
 void main() {
   var person = Person();
   print(person);
+  print(person.name);
+  print(person.address);
+  print(person.age);
 
   Person person2 = Person();
   print(person2);
