@@ -5,10 +5,22 @@ class Person {
   final String address = "123 Main St"; //final variable tidak bisa diubah lagi
 
 // https://youtu.be/k0ycD2aqPzU?t=2939
-  Person(String paramName, int paramAge) {
-    name = paramName;
-    age = paramAge;
-  }
+  // Person(String paramName, int paramAge) {
+  //   name = paramName;
+  //   age = paramAge;
+  // }
+
+  // https://youtu.be/k0ycD2aqPzU?t=3073 - variable shadowing
+  // Person(String name, int age) {
+  //   name = name;
+  //   age = age;
+  // }
+
+  // https://youtu.be/k0ycD2aqPzU?t=3244 - this keyword
+  // Person(String name, int age) {
+  //   this.name = name;
+  //   this.age = age;
+  // }
 
   // https://youtu.be/k0ycD2aqPzU?t=1292
   void sayHello(String nameParam) {
@@ -16,6 +28,8 @@ class Person {
         "Hello $nameParam, my name is $name and my age is $age years old, and i live in $address");
   }
 
+  // https://youtu.be/k0ycD2aqPzU?t=3388 - formal parameter
+  Person(this.name, this.age);
   // https://youtu.be/k0ycD2aqPzU?t=1663 method expression body
   void bangun() => print("Person class is wakeup");
   void tidur() => print("Person class is sleep");
@@ -35,8 +49,8 @@ void main() {
   print(person.address);
   print(person.age);
   // https://youtu.be/k0ycD2aqPzU?t=1087
-  person.name = 'Satria';
-  person.age = 30;
+  // person.name = 'Satria';
+  // person.age = 30;
   // person.address = 'Indonesia'; //bakal error karena final
   print(person.age);
   person.sayHello('Budi Utomo');
