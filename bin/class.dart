@@ -21,6 +21,12 @@ class Person {
   String state() => "state is normal";
 }
 
+extension SayGoodBye on Person {
+  void sayGoodBye(String nameParam) {
+    print("Goodbye $nameParam, from me $name");
+  }
+}
+
 void main() {
   var person = Person();
   print(person);
@@ -36,6 +42,7 @@ void main() {
   person.bangun();
   person.tidur();
   print(person.state());
+  person.sayGoodBye('Santoso');
 
 // https://youtu.be/k0ycD2aqPzU?t=1048
   Person person2 = Person();
