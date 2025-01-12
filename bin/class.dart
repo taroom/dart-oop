@@ -8,6 +8,11 @@ class Person {
     this.name = name;
     this.age = age;
   }
+
+  // https://youtu.be/k0ycD2aqPzU?t=1292
+  void sayHello() {
+    print("Hello $name, your age is $age years old, and you live in $address");
+  }
 }
 
 void main() {
@@ -21,6 +26,7 @@ void main() {
   person.age = 30;
   // person.address = 'Indonesia'; //bakal error karena final
   print(person.age);
+  person.sayHello();
 
 // https://youtu.be/k0ycD2aqPzU?t=1048
   Person person2 = Person();
