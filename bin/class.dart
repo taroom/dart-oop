@@ -4,9 +4,10 @@ class Person {
   int? age; //null safety
   final String address = "123 Main St"; //final variable tidak bisa diubah lagi
 
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
+// https://youtu.be/k0ycD2aqPzU?t=2939
+  Person(String paramName, int paramAge) {
+    name = paramName;
+    age = paramAge;
   }
 
   // https://youtu.be/k0ycD2aqPzU?t=1292
@@ -28,7 +29,7 @@ extension SayGoodBye on Person {
 }
 
 void main() {
-  var person = Person();
+  var person = Person('Khurasan', 45);
   print(person);
   print(person.name);
   print(person.address);
@@ -45,6 +46,6 @@ void main() {
   person.sayGoodBye('Santoso');
 
 // https://youtu.be/k0ycD2aqPzU?t=1048
-  Person person2 = Person();
+  Person person2 = Person('Budi', 25);
   print(person2);
 }
